@@ -1,0 +1,22 @@
+{
+	"//private_keys": "keys with permission to pull repos from github.  There's no reason for these keys to have additional permisisons",
+	"private_keys": {
+		"backuptesting": "-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEAoZ/UbSZ5SIPMvnoAblymvnn3twV2Tx8bPjwK7Prq5fdBk4Hs\nVxRu+tLjytPEj03G9l2xj9YUq/Iil3Cp3qxEI3qOnKewVTFfJtlgSstegD89O9Wx\nHXNIhsu7pSj+FgBB0xTM4Lwe41O002NZKhOQM3HFbID/7WccBqPsPnZEhLd+HXuX\n1BX7jeEaX+Xp1Xh6OoZHGw6YFVw76zKzkOClemJDLRyxnSQ5xvxMxixxgXGT97Rl\noeqBoALJrJUOP9yncY3AQfUmT0fGHQqwuhKuYLUU2UQkGtbZHenq2Bz3F8EIoTiZ\nNUG9upwbI7IQwzkcYYhnmkUUUCSiXdNZCjPlywIDAQABAoIBAGTFoM9Fc81w0BHb\nQ7WL8zNEHN1yfGesv3G4Qh+r+xXTaoGsOk25IdEl+H2YODAZkHo/xNwn4M+ss0C1\nMFT0F6//VDf8ngcgN3Gji1RXJN7VjzplbH8uSAQztxWtT28sTd5sU6mz4ZZftJkw\nkoGXnQtWXn/elrPQ3DqPrlbrqqEMQeA99PXSPfwCm1LvQjYUyZswsHTSqL0y1EKI\nQ/kOcmX/ksTeF1WGkQGhpoUn1lqF/duK7pFf6u7YBbF36wmeKCed88PykQDqmRal\nlg50/eOhWggZ2nucmnhq5we2WqkPyQc2AKVkd7XTo6oENacfNeqCk2LkDLxJpZKU\nPTCn0vECgYEAy5gancim29EYuxcT3Ilv3cAeMUHOIRt/u3YtpqJia37oIzW9aw0q\n777COYTtNMZZ4v0VFdUFYq7Y5kYNp+0plb6Zj5YyTMazn3xdRduiLPDbvHwL0im4\nU3SiGzyPoylhBYMsOB45Z+F7umVwqYvr1njN5Wr79/rVQuGRZgy4vU0CgYEAyzoc\nvlQDQS2pXVuTAaX0fXQ9b329BywCTuFGhDikkldIzVQNEK+WaWsiZ7bjhVb9Bm+1\nw8ajtmMa8v2xaNgvuALIHQ/pQr0LUtAmNu6PGgXprIGiAb2m3DyssXtQ9/b6+EkF\nDNRkIrYiYsmolvJoF+AuFfEKSabtjWTQsTCMA3cCgYEAr+fLl2g2QtZ2t69IydM1\nhDLp40UoBBLuWdnRt5e10YrkpwdXkZbe8iWvSmM/T8nQ//4KqcJT1N+dJ9h/FAgl\nVexIYXc0HoHP0IxzSlhp1sqEEGZdEEhbqj+rkDzTHfYyjcC4BASZNNftPy9GGDd8\nnOHjg8Tbz3Y5rH+YUMPNGkECgYADNNWDQzwR6TCE4o79NasX15+ohKlY1Z7rs64z\nI9mk3W+unabfHoYW/7O5Qy9vySGQ2m5ZumaW2BVyxAHqj46hLpoNq1SY0va8xb/0\nmer0FCfNqvXtZRqe2u42lqV+ZA0toalMvIUf7xO3z0qzpvtxdP4FJpps8w9IbdDF\nGuj6nQKBgD0vTEW9gd4Mf/b/hqo/Knrw0mPHNflZ82AHZpSI/OMckGNftaY2rzf3\n5wP0JvZxaYBg/7sxjKNv6cJ98tULA53y2lu4boRyzXhl69MYE49duRu6CEBeSox1\nsHcwaQh7vriv4jzartxgNaBao/zdbl+pmtLcMdq0QPYUi57+o3qa\n-----END RSA PRIVATE KEY-----"
+	},
+	"//public keys": "used for pulling repositories from the backup server.  ",
+	"public_keys": {
+		"backuptesting-pull": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLiXgnpat5q6gnFkrGiZTbf/nKNhCpYQfghlSSPiBopunC/pOwYxVm2m3XV6/61VoQiO3LqThH5Gmdnog0Ak9pxMBm8rdd3XwedfzDjYDFx8WJ/CeuMaNLvIMjCWS2/wM6O2tRkegTwbT6pIL4bwEIlqgWmOHU1bo2Rw1Hwv6WstoJq+85XZ8dbFWXQEqEJq0+NvHPJwS/U0D7u++r/a6/2kjideDq8OPu0lEIisfGqPx65lpZvjQPxpHYo1WSc3yU85I9hiC3kit5PLbX0Q3Bi5TwVAbXkMJYQhG3ovKMvZlVov/fPCvMSoVRp3Qbx1DTPmJPMAY2BzOYbzNhjC6N backuptesting-pull"
+	},
+    "//seed_repos": "Repository names and URLs to seed when the server boots.  The server will backup any repo from which it's notified with a valid token, but this set makes the backup persistent across backup server reboots / replacements, effectively 'seeding' the backups.  In the future, this could be improved by backing repo mediata in eg SimpleDB so that the data can persist between reboots, and even propegate across multiple backup servers, but that's beyond the scope of the current effort to offer a repository backup", 
+    "seed_repos": [
+        {
+            "name": "backuptesting", 
+            "url": "git@github.com:bloomhealth/backuptesting.git", 
+            "user": "provisioning",
+            "private_key": "backuptesting",
+            "public_keys": [ "backuptesting-pull" ]
+        }
+    ], 
+    "//token": "used to do a weak sort of authentication for causing the app to do a checkout or checking repo status", 
+    "token": "f65cebf2a000b6806e212acb2102ea35ca46a0d52a015866bc242a73feca11ab"
+}

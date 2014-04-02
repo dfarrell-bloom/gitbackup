@@ -1,0 +1,14 @@
+
+description "Upstart config for gitbackup webapp - backup github repos based on gihub webhook notificaations"
+author      "Dan Farrell - dfarrell@bloomhealthco.com - 2014.04.07"
+
+start on runlevel [2345]
+stop on starting rc RUNLEVEL=[016]
+
+setuid <%= node['gitbackup']['user'] %>
+setgid <%= node['gitbackup']['user'] %>
+chdir <%=  ::File.join node['gitbackup']['home'], 'gitbackup' %>
+script 
+    export HOME="<%= node['gitbackup']['home'] %>"
+    exec ruby <%= ::File.join node['gitbackup']['home'], 'gitbackup', 'gitbackup.rb' %> > /var/log/gitbackup.log 2>&1
+end script

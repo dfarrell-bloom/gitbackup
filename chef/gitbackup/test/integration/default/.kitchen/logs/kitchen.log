@@ -1,0 +1,31 @@
+I, [2014-04-04T10:58:41.554578 #17408]  INFO -- Kitchen: -----> Starting Kitchen (v1.2.1)
+E, [2014-04-04T10:58:41.555384 #17408] ERROR -- Kitchen: ------Exception-------
+E, [2014-04-04T10:58:41.555422 #17408] ERROR -- Kitchen: Class: Kitchen::UserError
+E, [2014-04-04T10:58:41.555445 #17408] ERROR -- Kitchen: Message: Kitchen YAML file /Users/dfarrell/git/gitbackup/chef/gitbackup/test/integration/default/.kitchen.yml does not exist.
+E, [2014-04-04T10:58:41.555464 #17408] ERROR -- Kitchen: ------Backtrace-------
+E, [2014-04-04T10:58:41.555482 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/test-kitchen-1.2.1/lib/kitchen/loader/yaml.rb:74:in `read'
+E, [2014-04-04T10:58:41.555501 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/test-kitchen-1.2.1/lib/kitchen/config.rb:78:in `data'
+E, [2014-04-04T10:58:41.555519 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/test-kitchen-1.2.1/lib/kitchen/config.rb:66:in `suites'
+E, [2014-04-04T10:58:41.555537 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/test-kitchen-1.2.1/lib/kitchen/config.rb:90:in `filter_instances'
+E, [2014-04-04T10:58:41.555556 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/test-kitchen-1.2.1/lib/kitchen/config.rb:72:in `build_instances'
+E, [2014-04-04T10:58:41.555573 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/test-kitchen-1.2.1/lib/kitchen/config.rb:52:in `instances'
+E, [2014-04-04T10:58:41.555592 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:64:in `get_filtered_instances'
+E, [2014-04-04T10:58:41.555611 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:85:in `parse_subcommand'
+E, [2014-04-04T10:58:41.555629 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/test-kitchen-1.2.1/lib/kitchen/command/action.rb:37:in `block in call'
+E, [2014-04-04T10:58:41.555647 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/benchmark.rb:280:in `measure'
+E, [2014-04-04T10:58:41.555665 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/test-kitchen-1.2.1/lib/kitchen/command/action.rb:36:in `call'
+E, [2014-04-04T10:58:41.555683 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/test-kitchen-1.2.1/lib/kitchen/cli.rb:47:in `perform'
+E, [2014-04-04T10:58:41.555702 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/test-kitchen-1.2.1/lib/kitchen/cli.rb:118:in `block (2 levels) in <class:CLI>'
+E, [2014-04-04T10:58:41.555719 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/thor-0.18.1/lib/thor/command.rb:27:in `run'
+E, [2014-04-04T10:58:41.555738 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/thor-0.18.1/lib/thor/invocation.rb:120:in `invoke_command'
+E, [2014-04-04T10:58:41.555756 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/test-kitchen-1.2.1/lib/kitchen/cli.rb:233:in `invoke_task'
+E, [2014-04-04T10:58:41.555773 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/thor-0.18.1/lib/thor.rb:363:in `dispatch'
+E, [2014-04-04T10:58:41.555792 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/thor-0.18.1/lib/thor/base.rb:439:in `start'
+E, [2014-04-04T10:58:41.555811 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/test-kitchen-1.2.1/bin/kitchen:13:in `block in <top (required)>'
+E, [2014-04-04T10:58:41.555829 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/test-kitchen-1.2.1/lib/kitchen/errors.rb:81:in `with_friendly_errors'
+E, [2014-04-04T10:58:41.555847 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/gems/test-kitchen-1.2.1/bin/kitchen:13:in `<top (required)>'
+E, [2014-04-04T10:58:41.555864 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/bin/kitchen:23:in `load'
+E, [2014-04-04T10:58:41.555883 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/bin/kitchen:23:in `<main>'
+E, [2014-04-04T10:58:41.555912 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/bin/ruby_executable_hooks:15:in `eval'
+E, [2014-04-04T10:58:41.555934 #17408] ERROR -- Kitchen: /Users/dfarrell/.rvm/gems/ruby-1.9.3-p484/bin/ruby_executable_hooks:15:in `<main>'
+E, [2014-04-04T10:58:41.555956 #17408] ERROR -- Kitchen: ----------------------

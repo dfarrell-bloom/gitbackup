@@ -1,6 +1,7 @@
 
 source "https://rubygems.org"
 
-gem "thin"
+gem "json"
+gem "net-ssh"
 gem "sinatra"
-gem "erubis"
+gem "thin"

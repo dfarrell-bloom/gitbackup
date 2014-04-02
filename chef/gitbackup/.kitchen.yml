@@ -1,0 +1,40 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-12.04
+#  - name: centos-6.4
+
+suites:
+  - name: default
+    run_list:
+      - recipe[gitbackup::default]
+    attributes:
+      gitbackup: 
+        repository: "https://github.com/dfarrell-bloom/gitbackup.git"
+        webapp:
+          token: TestToken
+          private_keys:
+            backuptesting: "-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEAoZ/UbSZ5SIPMvnoAblymvnn3twV2Tx8bPjwK7Prq5fdBk4Hs\nVxRu+tLjytPEj03G9l2xj9YUq/Iil3Cp3qxEI3qOnKewVTFfJtlgSstegD89O9Wx\nHXNIhsu7pSj+FgBB0xTM4Lwe41O002NZKhOQM3HFbID/7WccBqPsPnZEhLd+HXuX\n1BX7jeEaX+Xp1Xh6OoZHGw6YFVw76zKzkOClemJDLRyxnSQ5xvxMxixxgXGT97Rl\noeqBoALJrJUOP9yncY3AQfUmT0fGHQqwuhKuYLUU2UQkGtbZHenq2Bz3F8EIoTiZ\nNUG9upwbI7IQwzkcYYhnmkUUUCSiXdNZCjPlywIDAQABAoIBAGTFoM9Fc81w0BHb\nQ7WL8zNEHN1yfGesv3G4Qh+r+xXTaoGsOk25IdEl+H2YODAZkHo/xNwn4M+ss0C1\nMFT0F6//VDf8ngcgN3Gji1RXJN7VjzplbH8uSAQztxWtT28sTd5sU6mz4ZZftJkw\nkoGXnQtWXn/elrPQ3DqPrlbrqqEMQeA99PXSPfwCm1LvQjYUyZswsHTSqL0y1EKI\nQ/kOcmX/ksTeF1WGkQGhpoUn1lqF/duK7pFf6u7YBbF36wmeKCed88PykQDqmRal\nlg50/eOhWggZ2nucmnhq5we2WqkPyQc2AKVkd7XTo6oENacfNeqCk2LkDLxJpZKU\nPTCn0vECgYEAy5gancim29EYuxcT3Ilv3cAeMUHOIRt/u3YtpqJia37oIzW9aw0q\n777COYTtNMZZ4v0VFdUFYq7Y5kYNp+0plb6Zj5YyTMazn3xdRduiLPDbvHwL0im4\nU3SiGzyPoylhBYMsOB45Z+F7umVwqYvr1njN5Wr79/rVQuGRZgy4vU0CgYEAyzoc\nvlQDQS2pXVuTAaX0fXQ9b329BywCTuFGhDikkldIzVQNEK+WaWsiZ7bjhVb9Bm+1\nw8ajtmMa8v2xaNgvuALIHQ/pQr0LUtAmNu6PGgXprIGiAb2m3DyssXtQ9/b6+EkF\nDNRkIrYiYsmolvJoF+AuFfEKSabtjWTQsTCMA3cCgYEAr+fLl2g2QtZ2t69IydM1\nhDLp40UoBBLuWdnRt5e10YrkpwdXkZbe8iWvSmM/T8nQ//4KqcJT1N+dJ9h/FAgl\nVexIYXc0HoHP0IxzSlhp1sqEEGZdEEhbqj+rkDzTHfYyjcC4BASZNNftPy9GGDd8\nnOHjg8Tbz3Y5rH+YUMPNGkECgYADNNWDQzwR6TCE4o79NasX15+ohKlY1Z7rs64z\nI9mk3W+unabfHoYW/7O5Qy9vySGQ2m5ZumaW2BVyxAHqj46hLpoNq1SY0va8xb/0\nmer0FCfNqvXtZRqe2u42lqV+ZA0toalMvIUf7xO3z0qzpvtxdP4FJpps8w9IbdDF\nGuj6nQKBgD0vTEW9gd4Mf/b/hqo/Knrw0mPHNflZ82AHZpSI/OMckGNftaY2rzf3\n5wP0JvZxaYBg/7sxjKNv6cJ98tULA53y2lu4boRyzXhl69MYE49duRu6CEBeSox1\nsHcwaQh7vriv4jzartxgNaBao/zdbl+pmtLcMdq0QPYUi57+o3qa\n-----END RSA PRIVATE KEY-----"
+            gitbackup: "-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEAwuCaEvOc7lpjC7UaziF0JndUiesI9kRmA4ovdXzGVK+VCmuN\ngLxvxOjN/EWpsYDftE6tEnBUpJ+WkROE/xeQzL0+CMw0ZGNnvkJT/I+/6KHuQbU5\nGZGH4UPl4+OHkEb0Lnwp0gBPT3efeGXwXwAXZMrebXbTE7dfMAcZrZYZV6UKJASQ\naeGZ3GBXDT8YSRGKJOi/azKUfO3j45ygA9e32XHg/wbcg27P3uQ4dKJ3FZ0Ne10N\n51qkweuPE45AqOOvlB18BO1oNHjBLJfky9isE/Sa0sOxJLrXoyd/Gt0LEuJJsqJ0\neMbhl63tVMqjlLbrpQFgQoK5DZwiwZ6kUqsQVQIDAQABAoIBAQCzD6FCrKmTsWW0\nyjHZGZAaECeTmmzfq7V4py44a+/ovHTb4DtjAMJKUgeDN5dWzC3BBVGt0Z1Urnaw\n0xivM74PAgvQFaJGY7hdb6CwPn19idzcb2IKBliuOa8wmE5l2WxgkiHzHenCAQ58\nmF4nTHQyXt3GAxqr0SAbh0qm33ZlulsmrUjkwI8CQo2RWT0qV8E3f2Cfyp44nWDt\nZgRkt9wODP/BAnYOKRwnnQRhF1W6KyPS/ZYc2DMPyGd07u+/Nd3o1tra/ADhTzAt\nZNf6hRC+o/BuoTxIFzCoiR/HvdphmCFPBhxA2SuTgs558GdEhZsy2ITazylYa1fT\nKS3CLavBAoGBAOjaG99JS1BBEHoeIn53wYEKYpPVrI8+nW4dWrEwZTNVCU3ECtQX\n3LdjwGEr6RnyqLdtJxWzHKyW2DjWcG53hCPw01FgUdpirE3JwIFVnOMzAP+rqT76\n5dpm+kI+2jIaUzMXzKn98dOpW20weEt0daGx+B9gb5JLXohw3NwPcVwJAoGBANZA\nEdzQC7c70qpRxUdR+eYyHahgwIjDLwNuKOTkWV9lXJIMbJnGeU0ZfAc+8o5m3BiB\nex1+czZLsXOVXsKDhFbaCJ9fqotbU0jc6BTcB2D2j9elK6AhZlotKY4Je9Y1weDH\nix34PuZFzWC9O/x3OzX3ecJPZAAd78DfM903IPztAoGAIntSD1HCRmMsNnlJ8GJ5\nlEteZ7gHsrq6A3lzWbPp+J0KIKr8U4YpGDs8XOdswHvvwiH23L7Ga0R3Roty4Njw\nB4Z9NJrH5Egibe6HhF+SOQ7vge0AxiPPb/U58B9wnmTJl1JZ636AljCJKnU4Cyx2\n0vgQ30yfmRFyMVBNVIUw60kCgYBJlP+NgrZDW/xiGmtSr0jQUm31IiV90usWloLc\n+b/oD3vXfQTfW1bVr+b05h2P4qu8jtulqYQQJbbwJ2DAFUMiQQetFMIR0m+sGpJq\nd5bhKk0ElumAuXfZiKE48vDhBN1tQZr51ARmOZrrmpI7hweC5Vef8Hw7vgxVhVLe\nqsxdkQKBgANO2faYdBfiVj5X+E19mlcE7ezVVstPhi4w7hETe2TPNzWdD9ELoPIk\nfSX6Rk6dXkFfm/1Ip/dc2y66FtdB8as8EOfawgMiySzXwe/4wgAJgw36AujGEMGg\nuAr+SoD62xQEGocS5UGFoA8UQf6ghWVz24m2j3ws0kuaajef2fiu\n-----END RSA PRIVATE KEY-----"
+          public_keys: 
+            backuptesting_pull: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDLiXgnpat5q6gnFkrGiZTbf/nKNhCpYQfghlSSPiBopunC/pOwYxVm2m3XV6/61VoQiO3LqThH5Gmdnog0Ak9pxMBm8rdd3XwedfzDjYDFx8WJ/CeuMaNLvIMjCWS2/wM6O2tRkegTwbT6pIL4bwEIlqgWmOHU1bo2Rw1Hwv6WstoJq+85XZ8dbFWXQEqEJq0+NvHPJwS/U0D7u++r/a6/2kjideDq8OPu0lEIisfGqPx65lpZvjQPxpHYo1WSc3yU85I9hiC3kit5PLbX0Q3Bi5TwVAbXkMJYQhG3ovKMvZlVov/fPCvMSoVRp3Qbx1DTPmJPMAY2BzOYbzNhjC6N backuptesting-pull"
+            gitbackup_pull: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDC4JoS85zuWmMLtRrOIXQmd1SJ6wj2RGYDii91fMZUr5UKa42AvG/E6M38RamxgN+0Tq0ScFSkn5aRE4T/F5DMvT4IzDRkY2e+QlP8j7/ooe5BtTkZkYfhQ+Xj44eQRvQufCnSAE9Pd594ZfBfABdkyt5tdtMTt18wBxmtlhlXpQokBJBp4ZncYFcNPxhJEYok6L9rMpR87ePjnKAD17fZceD/BtyDbs/e5Dh0oncVnQ17XQ3nWqTB648TjkCo46+UHXwE7Wg0eMEsl+TL2KwT9JrSw7EkutejJ38a3QsS4kmyonR4xuGXre1UyqOUtuulAWBCgrkNnCLBnqRSqxBV backuptesting-pull-2"
+          seed_repos: 
+            - name: backuptesting
+              url: git@github.com:bloomhealth/backuptesting.git
+              user: backuptesting
+              public_keys: 
+                - backuptesting_pull
+                - gitbackup_pull
+              private_key: backuptesting
+            - name: gitbackup 
+              url: git@github.com:dfarrell-bloom/gitbackup.git
+              user: gitbackup
+              public_keys: 
+                - gitbackup_pull 
+              private_key: gitbackup
