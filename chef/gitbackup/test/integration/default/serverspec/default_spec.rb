@@ -165,6 +165,7 @@ describe "Webapp should be functioning ( psh-93 )" do
     end
 end
 
+system( 'grep localhost /root/.ssh/known_hosts || ( [[ -d /root/.ssh ]] || (mkdir /root/.ssh; chmod 0700 .ssh; touch .ssh/known_hosts; chmod 0600 .ssh/known_hosts;  ); ssh-keyscan localhost >> /root/.ssh/known_hosts )' )
 describe "Repos should be available for checkout with the specified key ( known to match the given public )" do
     describe command( %q|ssh-agent bash -c "ssh-add /home/gitbackup/.ssh/gitbackup; git clone gitbackup@localhost:gitbackup && rm -rf gitbackup"| ) do
         it { should return_exit_status 0 }

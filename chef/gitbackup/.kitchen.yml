@@ -15,7 +15,6 @@ suites:
       - recipe[gitbackup::default]
     attributes:
       gitbackup: 
-        repository: "https://github.com/dfarrell-bloom/gitbackup.git"
         webapp:
           token: TestToken
           private_keys:
@@ -33,7 +32,7 @@ suites:
                 - gitbackup_pull
               private_key: backuptesting
             - name: gitbackup 
-              url: git@github.com:dfarrell-bloom/gitbackup.git
+              url: git@github.com:bloomhealth/gitbackup.git
               user: gitbackup
               public_keys: 
                 - gitbackup_pull 
