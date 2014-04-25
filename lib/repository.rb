@@ -98,7 +98,7 @@ class Repository
 	 	cmd = args.clone.unshift( 'git' ).map{ |arg| Shellwords.shellescape(arg) } 
 		if config['private_key'] 
 			cmd = %W|cd $HOME/#{config['name'] }; ssh-agent bash -c "ssh-add #{
-						File.join "~", ".ssh", Shellwords.escape( config['private_key'] )
+						File.join "~", ".ssh", Shellwords.escape( config['name'] )
 					} && #{Shellwords.shelljoin cmd}"|.join " "
 		end
 		cmd
